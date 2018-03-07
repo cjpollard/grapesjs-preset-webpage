@@ -43,10 +43,6 @@ export default (editor, config) => {
       context: ful,
       className: 'fa fa-arrows-alt',
     },{
-      id: expt,
-      className: 'fa fa-code',
-      command: e => e.runCommand(expt),
-    },{
       id: 'undo',
       className: 'fa fa-undo',
       command: e => e.runCommand('core:undo'),
@@ -58,6 +54,10 @@ export default (editor, config) => {
       id: cmdImport,
       className: 'fa fa-download',
       command: e => e.runCommand(cmdImport),
+    },{
+      id: expt,
+      className: 'fa fa-upload',
+      command: e => e.runCommand(expt),
     },{
       id: cmdClear,
       className: 'fa fa-trash',

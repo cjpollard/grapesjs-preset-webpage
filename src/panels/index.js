@@ -76,7 +76,7 @@ export default (editor, config) => {
     },{
       id: ola,
       command: ola,
-      className: 'fa fa-bars',
+      className: 'fa fa-database',
     },{
       id: obl,
       active: true,

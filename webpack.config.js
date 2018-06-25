@@ -22,7 +22,7 @@ module.exports = (env = {}) => {
   return {
     entry: './src',
     output: {
-        filename: `./${name}.min.js`,
+        filename: `./dist/${name}.min.js`,
         library: name,
         libraryTarget: 'umd',
     },

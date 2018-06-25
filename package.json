@@ -7,7 +7,7 @@
     "lint": "eslint src",
     "v:patch": "npm version --no-git-tag-version patch",
     "build": "npm run v:patch && webpack --env.production --mode production && npm run build:css",
-    "build-n": "webpack --env.production && npm run build:css",
+    "build-n": "webpack --env.production --mode production && npm run build:css",
     "start": "webpack-dev-server --open --progress --colors & npm run build:css -- -w",
     "build:css": "node-sass src/style/main.scss dist/grapesjs-preset-webpage.min.css --output-style compressed"
   },
@@ -37,19 +37,20 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^4.16.0",
-    "html-webpack-plugin": "^2.30.1",
+    "eslint": "^5.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.0",
-    "webpack": "^3.12.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
     "grapesjs-aviary": "^0.1.2",
-    "grapesjs-blocks-basic": "^0.1.7",
-    "grapesjs-component-countdown": "^0.1.1",
+    "grapesjs-blocks-basic": "^0.1.8",
+    "grapesjs-component-countdown": "^0.1.3",
     "grapesjs-navbar": "https://github.com/cjpollard/grapesjs-navbar/tarball/master",
     "grapesjs-plugin-export": "^0.1.5",
     "grapesjs-plugin-filestack": "^0.1.1",

@@ -8,7 +8,6 @@
     "v:patch": "npm version --no-git-tag-version patch",
     "build": "npm run v:patch && webpack --env.production --mode production && npm run build:css",
     "build-n": "webpack --env.production --mode production && npm run build:css",
-    "build-dev": "webpack --env.dev --mode development && npm run build:css",
     "start": "webpack-dev-server --open --progress --colors & npm run build:css -- -w",
     "build:css": "node-sass src/style/main.scss dist/grapesjs-preset-webpage.min.css --output-style compressed"
   },

@@ -30,9 +30,13 @@ module.exports = (env = {}) => {
           test: /\.js$/,
           loader: 'babel-loader',
           include: /src/,
+          query: {
+            presets: ["env"]
+          }
       }],
     },
     externals: {'grapesjs': 'grapesjs'},
+    devtool: "cheap-module-source-map",
     plugins: plugins,
   };
 }

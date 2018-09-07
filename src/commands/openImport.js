@@ -13,7 +13,12 @@ export default (editor, config) => {
   btnImp.innerHTML = config.modalImportButton;
   btnImp.className = `${pfx}btn-prim ${pfx}btn-import`;
   btnImp.onclick = e => {
-    editor.addComponents(viewerEditor.getValue().trim());
+    const newHtml = viewerEditor.getValue().trim();
+    if(editor.getSelected()) {
+      editor.getSelected().append(newHtml);
+    } else {
+      editor.addComponents(newHtml);
+    }
     modal.close();
   };
 

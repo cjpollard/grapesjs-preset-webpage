@@ -23,9 +23,9 @@ export default (editor, config) => {
     label: 'Quote',
     category: 'Basic',
     attributes: { class: 'fa fa-quote-right' },
-    content: `<blockquote class="quote">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit
-      </blockquote>`
+    content: `<blockquote class="quote"><i>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit"
+      </i>~Virgil</blockquote>`
   });
 
   toAdd('text-basic') && bm.add('text-basic', {
